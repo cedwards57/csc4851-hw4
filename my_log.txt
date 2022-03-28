@@ -1,0 +1,97 @@
+i confused the directories and was using the test set to train there for a while, oops. fixed
+
+# relu without view
+mat1 and mat2 shapes cannot be multiplied (332800x52 and 576x256)
+
+
+
+# start of forward
+torch.Size([100, 3, 224, 224])
+
+# after conv1
+torch.Size([100, 32, 220, 220])
+
+# immediately before view
+torch.Size([100, 64, 52, 52])
+
+# relu after "fixed" view
+mat1 and mat2 shapes cannot be multiplied (1x17305600 and 576x256)
+** need to update view AND self.fc1 to match dims right before view
+
+# example code (start, before view, after view)
+torch.Size([32, 1, 28, 28])
+torch.Size([32, 64, 3, 3])
+torch.Size([32, 576])
+
+
+# "20" epochs, LR 0.001
+[1,   300] loss: 6.003
+[1,   600] loss: 5.995
+[1,   900] loss: 5.993
+[1,  1200] loss: 5.989
+[1,  1500] loss: 5.991
+[1,  1800] loss: 5.988
+[1,  2100] loss: 5.986
+[2,   300] loss: 5.980
+[2,   600] loss: 5.977
+[2,   900] loss: 5.974
+[2,  1200] loss: 5.968
+[2,  1500] loss: 5.962
+[2,  1800] loss: 5.952
+...
+[14,  2100] loss: 5.119
+[15,   300] loss: 5.102
+[15,   600] loss: 5.061
+[15,   900] loss: 5.074
+[15,  1200] loss: 5.097
+[15,  1500] loss: 5.066
+[15,  1800] loss: 5.051
+[15,  2100] loss: 5.019
+...
+[19,  2100] loss: 4.816
+[20,   300] loss: 4.776
+[20,   600] loss: 4.798
+[20,   900] loss: 4.804
+[20,  1200] loss: 4.821
+[20,  1500] loss: 4.806
+[20,  1800] loss: 4.804
+[20,  2100] loss: 4.788
+
+Accuracy 1%
+
+
+# 20 epochs, LR 0.005
+[1,   500] loss: 5.993
+[1,  1000] loss: 5.986
+[1,  1500] loss: 5.970
+[1,  2000] loss: 5.950
+[2,   500] loss: 5.908
+[2,  1000] loss: 5.877
+[2,  1500] loss: 5.851
+[2,  2000] loss: 5.808
+[3,   500] loss: 5.748
+...
+[18,  1500] loss: 3.932
+[18,  2000] loss: 3.938
+[19,   500] loss: 3.905
+[19,  1000] loss: 3.875
+[19,  1500] loss: 3.862
+[19,  2000] loss: 3.816
+[20,   500] loss: 3.813
+[20,  1000] loss: 3.830
+[20,  1500] loss: 3.807
+[20,  2000] loss: 3.836
+
+Accuracy 21%
+
+wanted to use 100 epochs but that would take too long to execute for any kind of testing whoops. going for 20 epochs, which
+
+switched back to kaggle because google colab kicked me off the GPU. and the CPU-only speed is abhorrent
+
+
+
+
+
+
+
+
