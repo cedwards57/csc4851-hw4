@@ -11,4 +11,4 @@
 `index_correction.ipynb` - adjusts the indeces in the `submission.csv` to 0-399 since the example was off. later used to get my mean loss
 
 
-i did a lot of adjustment to model & other code before any commits but i didn't start saving versions specifically until they actually started outputting stuff
+i did a lot of adjustment to model & other code before any commits but i didn't start saving versions specifically until they actually started outputting stuff, at which point i went to mostly just fine tuning parameters
