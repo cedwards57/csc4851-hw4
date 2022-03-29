@@ -4,7 +4,7 @@ Image detection would be very useful for video surveillance technology. Unlike i
 Image segmentation could be used
 
 ## 2. YOLO, and YOLO vs RCNN
-As the name suggests, You Only Look Once (YOLO) looks at each image only once at full size in order to generate its image detection bounding boxes, which means it's very fast. 
+As the name suggests, You Only Look Once (YOLO) looks at each image only once at full size in order to generate its image detection bounding boxes, which means it's fast. It achieves this by putting various grids on the image it's looking at, and determining what objects overlap with what cells. It uses these for bounding box regression, where it finds more precise bounds over each thing. In addition, it uses Intersection Over Union (IOU) to 
 
 ## 3. Negative Log Likelihood
 

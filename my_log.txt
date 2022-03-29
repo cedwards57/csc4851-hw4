@@ -88,10 +88,18 @@ wanted to use 100 epochs but that would take too long to execute for any kind of
 
 switched back to kaggle because google colab kicked me off the GPU. and the CPU-only speed is abhorrent
 
+increasing learning rate again to .01 and changing normalization values back to something more middle ground, immediately see improvement
 
+21% accuracy avg loss in csv: 3.75294642880559
 
+26% accuracy avg loss in csv: 3.5692732734046877
 
+increasing learning rate past .01 doesn't seem to do any more good; trying to fine-tune normalization params to see if there's a difference instead
 
+Norm .6 .4 best performance so far
+Norm .8 .1 slightly worse
+Norm .7 .3 similar to .6 .4 but seems worse
+Norm .5 .4 similar to .6. 4, slightly better?
 
-
+28% accuracy avg loss in csv: 3.2631829586438834
 
